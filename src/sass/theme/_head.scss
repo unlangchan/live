@@ -1,5 +1,96 @@
-#foot{
-	div{
-		color:red;
-	}
+/*  页头   */
+#header{
+  height: 76px;
+  .jflive_logo{
+    padding: 14px 0 0 0;
+  }
+  .online{
+    width: 120px;
+    padding: 42px 0 0 34px;
+
+    color: #686868;
+  }
+  .online span{
+    color: #f4a100;
+  }
+  .user_btns{
+    padding: 31px 0 0 0;
+    a{
+      line-height: 27px;
+
+      height: 27px;
+      margin: 0 5px 0 0;
+      padding: 0 10px;
+
+      text-decoration: none;
+
+      color: #fff;
+      border-radius: 3px;
+    }
+    .dsk{
+      color: #4e4e4e;
+    }
+    .pho{
+      position: relative;
+
+      cursor: pointer;
+
+      color: #4e4e4e;
+    }
+    .quit{
+      background: #585094;
+    }
+    .quit2{
+      color: #4e4e4e;
+    }
+    .u_center{
+      color: #4e4e4e;
+    }
+    .safe_op{
+      background: #d8262e;
+    }
+    .user_name{
+      line-height: 27px;
+
+      overflow: hidden;
+       margin-right: 10px;
+      max-width: 140px;
+   
+
+      white-space: nowrap;
+      text-overflow: ellipsis;
+    }
+  }
+  .ewm{
+    position: absolute;
+    z-index: 10;
+    top: 32px;
+    left: 0;
+
+    display: none;
+
+    width: 136px;
+    height: 134px;
+
+    border-radius: 3px;
+    background: #00b3c7;
+    img{
+      display: block;
+
+      margin: 8px auto 0;
+    }
+  }
+  em{
+    position: absolute;
+    top: -8px;
+    left: 0;
+
+    width: 90px;
+    height: 12px;
+  }
+
+  .hot_num{
+    padding: 34px 0 0 0;
+    margin-left:30px;
+  }
 }
