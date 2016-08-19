@@ -1,0 +1,37 @@
+#foot{
+		font-size: 14px;
+    	font-family: 微软雅黑;
+    	background: #474747;
+    	padding: 0 0 54px 0;
+	.top{
+		height: 59px;
+    	background-color: #363636;
+		p{
+			line-height: 59px;
+			text-align: center;
+    		color: white;
+    	}
+    a{
+    	color: white;
+    	padding: 0 13px;
+    	text-decoration: none;}
+    }
+    .content{
+		    padding: 45px 0 35px;
+    		background-color: #474747;
+    		p{
+    			    text-align: center;
+   					color: #afafb1;
+   					line-height: 24px;
+    		}
+    }
+    .dot{
+    	text-align: center;
+    	margin: 0 auto;
+    	overflow: hidden;
+    	a{
+    		text-decoration: none;
+    		outline: none;
+    	}
+    }
+}
