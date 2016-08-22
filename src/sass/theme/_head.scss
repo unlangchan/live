@@ -1,4 +1,4 @@
-/*  页头   */
+/*  é¡µå¤´   */
 #header{
   height: 76px;
   .jflive_logo{
@@ -9,10 +9,11 @@
     padding: 42px 0 0 34px;
 
     color: #686868;
+    span{
+      color:#f4a100;
+    }
   }
-  .online span{
-    color: #f4a100;
-  }
+
   .user_btns{
     padding: 31px 0 0 0;
     a{
