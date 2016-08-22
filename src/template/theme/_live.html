@@ -9,9 +9,10 @@
 			<div class="live_talk">
 				<div class="chat">
 					<ul>
-						<li class="item" ng-repeat="v in ::chat.list"> 
+						<li class="item" ng-repeat="v in ::chat.list">
 							<span class="time" ng-bind="v.time"></span>
-							<span class="icon"><img ng-src="{{v.icon}}"  height="19"></span>
+							<span class="icon">
+								<img ng-src="/assets/images/icons/level/{{v.icon}}"  title="{{v.as}}"height="18"></span>
 							<span class="name" ng-bind="v.name"></span>
 							<span class="to" ng-bind="v.to" ng-if="v.to"></span>
 							<span class="text" ng-bind-html="v.content"></span>

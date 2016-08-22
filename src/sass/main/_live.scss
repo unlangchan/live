@@ -20,6 +20,7 @@
     display: inline;
 
     width: 352px;
+    height: 621px;
     margin-left: 5px;
     .notice{
       line-height: 34px;
@@ -40,16 +41,25 @@
 
       background: #f8f4e1;
       .item{
-        margin: 2px 5px;
+        font-size: 12px;
+
+        position: relative;
+
+        margin: 2px 5px 2px 5px;
+        padding-left: 45px;
+        line-height:18px;
         .time{
+          position: absolute;
+          left: 0;
+
+          width: 45px;
+
           cursor: pointer;
 
           color: #757575;
         }
         .icon{
           font-size: 0;
-
-          margin: 0 5px;
           img{
             vertical-align: top;
           }
@@ -64,14 +74,14 @@
           &:before{
             margin: 0 5px;
 
-            content: '对';
+            content: '\5bf9';
 
             color: #610e09;
           }
           &:after{
             margin-left: 5px;
 
-            content: '说';
+            content: '\8bf4';
 
             color: #610e09;
           }
@@ -87,7 +97,7 @@
     }
     .edit{
       position: absolute;
-      bottom: 0;
+      bottom: 10px;
       left: 0;
 
       width: 100%;
@@ -123,6 +133,34 @@
 
         color: #fff;
         background: #00b3c7;
+      }
+    }
+  }
+}
+#live{
+  ._mCS_1{
+    .mCSB_inside{
+      & >.mCSB_container{
+        margin-right: 10px;
+      }
+    }
+    .mCSB_dragger{
+      .mCSB_dragger_bar{
+        background-color: inherit;
+      }
+      &.mCSB_dragger_onDrag,
+      &:active{
+        .mCSB_dragger_bar{
+          background-color: rgba(0,0,0,.4);
+
+              filter: 'alpha(opacity=40)';
+          -ms-filter: 'alpha(opacity=40)';
+        }
+      }
+    }
+    .mCSB_scrollTools{
+      .mCSB_draggerRail{
+        background-color: inherit;
       }
     }
   }
