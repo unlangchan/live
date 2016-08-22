@@ -1,0 +1,152 @@
+#jflive_wrap{
+             padding:0 0 75px 0;
+             overflow: hidden;
+   .jflive_title{
+             height:48px;
+             border-bottom: 2px solid #f4a100;
+             color:#f4a100;
+             overflow: hidden;
+       .jflive_title_left{
+             font:30px/48px "Microsoft YaHei";
+             color:#f4a100;
+         img{
+            display:inline-block;
+            vertical-align: middle;
+            margin:-3px 0 0 0;
+         }
+       }
+    }
+   .jflive_teachers{
+           height:300px;
+           margin-right:-48px;
+        .jflive_teachers_con{
+            width:400px;
+            position:relative;
+            padding-bottom: 10px;
+            float:left;
+            margin-right:48px;
+          .teachers{
+             width:200px;
+             height:200px;
+             display:block;
+             margin-top:80px;
+             border-radius:50%;
+             overflow: hidden;
+           }
+          dl{
+             width:200px;
+             position:absolute;
+             left:200px;
+            dt{
+              height:60px;
+              margin-bottom: 4px;
+              position:absolute;
+              left:-193px;
+            }
+            .dd2{
+               padding:0 0 10px 30px;
+               overflow: hidden;
+              span{
+                 height:30px;
+                 line-height:26px;
+                 text-align: center;
+                 display:block;
+                 float:left;
+              }
+              .sp2{
+                width:89px;
+                cursor:pointer;
+                color:#4d4d4d;
+                border:2px solid #f4a100;
+              }
+              .sp3{
+                color:#767676;
+                line-height:30px;
+                text-indent: 3px;
+                font-size:12px;
+              }
+            }
+            .dd1{
+               padding:0 0 0 30px;
+              .ed_tip2{
+                line-height:25px;
+                position:absolute;
+                bottom:14px;
+                left:0px;
+                padding-right: 10px;
+                background:#fff79e;
+                border:1px solid #f4a100;
+                border-radius:3px;
+                font-size:12px;
+                text-indent: 8px;
+                z-index: 99;
+                white-space: nowrap;
+              }
+              .t{
+               line-height:30px;
+               color:#545454;
+              }
+              .c{
+               color:#f4a100;
+              }
+              .bar{
+                  position:relative;
+                  width:152px;
+                  height:11px;
+                  margin-top:27px;
+                  background:#bebebe;
+                div{
+                 display:block;
+                 position:relative;
+                 background:#d8262e;
+                 height:11px;
+                   span{
+                    position:absolute;
+                    width:57px;
+                    height:23px;
+                    background:url(../assets/team/jflive_dot1.png);
+                    color:#fff;
+                    text-align: center;
+                    top:-27px;
+                    right:-27px;
+                   }
+                }
+              }
+              .mlz{
+               width:152px;
+               font-family: 30px/42px "Microsoft YaHei";
+               color:#f4a100;
+               display:block;
+               text-align: center;
+              }
+              .ed_tip{
+               width:236px;
+               line-height:25px;
+               position:absolute;
+               bottom:66px;
+               left:30px;
+               background:#fff79e;
+               border:1px solid #f4a100;
+               border-radius:3px;
+               font-size:12px;
+               z-index: 99;
+               text-indent: 8px;
+              }
+              .addml{
+                width:152px;
+                height:30px;
+                background:#f4a100;
+                color:#fff;
+                line-height:30px;
+                display:block;
+                text-align: center;
+                cursor:pointer;
+                  &:hover{
+                   background:#F3BC53;
+                  }
+              }
+            }
+          }
+    }
+   }
+}
