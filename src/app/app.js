@@ -4,6 +4,7 @@ angular.module('Live', [
   'ngAnimate',
   'ui.bootstrap',
   'ui.sortable',
+  'textAngular',
   'ngTouch',
   'toastr',
   'smart-table',

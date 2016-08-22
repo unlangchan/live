@@ -9,65 +9,12 @@
 			<div class="live_talk">
 				<div class="chat">
 					<ul>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v0.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v1.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v2.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v3.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v4.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v5.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v6.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/guest.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/admin.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
-						</li>
-						<li class="item">
-							<span class="time">-13:00-</span>
-							<span class="icon"><img src="/assets/images/icons/level/v0.png" alt="" height="19"></span>
-							<span class="name">荒漠</span>
-							<span class="text">148.8的空钯金，怎么看</span>
+						<li class="item" ng-repeat="v in ::chat.list"> 
+							<span class="time" ng-bind="v.time"></span>
+							<span class="icon"><img ng-src="{{v.icon}}"  height="19"></span>
+							<span class="name" ng-bind="v.name"></span>
+							<span class="to" ng-bind="v.to" ng-if="v.to"></span>
+							<span class="text" ng-bind-html="v.content"></span>
 						</li>
 					</ul>
 				</div>

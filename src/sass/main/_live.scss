@@ -40,21 +40,47 @@
 
       background: #f8f4e1;
       .item{
-        margin:2px 5px;
+        margin: 2px 5px;
         .time{
-          color:#757575;
+          cursor: pointer;
+
+          color: #757575;
         }
         .icon{
           font-size: 0;
-          margin:0 5px;
+
+          margin: 0 5px;
           img{
             vertical-align: top;
           }
         }
         .name{
+          cursor: pointer;
+
           color: #9e9e9e;
+        }
+        .to{
+          color: #9e9e9e;
+          &:before{
+            margin: 0 5px;
+
+            content: '对';
+
+            color: #610e09;
+          }
           &:after{
+            margin-left: 5px;
+
+            content: '说';
+
+            color: #610e09;
+          }
+        }
+        .text{
+          &:before{
             content: ':';
+
+            color: #9e9e9e;
           }
         }
       }
