@@ -29,8 +29,11 @@
 		data_decode(data);
 
 		function data_decode(i) {
+			var str = i.content,
 				arr = str.replace(/\[@:(.*?)\]/g,function(rs,$1){
+					i.to = $1;
 				}) 
+			console.log(i);
 		}
 		$scope.send = function() {
 			alert("发送成功");
