@@ -172,6 +172,11 @@
          height:154px;
          display:block;
          margin:0 auto;
+
+         transition: all 1s ease 0.2s;
+          &:hover{
+            transform:scale(1.2);
+          }
        }
       dd{
         color:#999;
