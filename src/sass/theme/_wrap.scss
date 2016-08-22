@@ -1,6 +1,7 @@
 #jflive_wrap{
              padding:0 0 75px 0;
              overflow: hidden;
+  /*team*/
    .jflive_title{
              height:48px;
              border-bottom: 2px solid #f4a100;
@@ -149,4 +150,60 @@
           }
     }
    }
+  /*team_end*/
+  /*activity*/
+  .jflive_activity{
+                overflow: hidden;
+     .mar33{
+       margin-right:34px;
+     }
+    dl{
+      width:232px;
+      overflow: hidden;
+       a{
+         width:232px;
+         height:154px;
+         overflow: hidden;
+         display:block;
+         position:relative;
+       }
+       img{
+         width:232px;
+         height:154px;
+         display:block;
+         margin:0 auto;
+         transition: all 1s ease 0.2s;
+          &:hover{
+            transform:scale(1.2);
+          }
+       }
+      dd{
+        color:#999;
+        padding:9px;
+        background:#f2f2f2;
+          span{
+            color:#f4a100;
+          }
+         p{
+           color:#333;
+           margin-bottom: 3px;
+         }
+      }
+      dt{
+         font-size:18px;
+         margin:0 0 8px;
+         font-weight:normal;
+      }
+    }
+  }
+  /*activity_end*/
+  /*class*/
+  .jflive_title_right{
+    a{
+      line-height:48px;
+      color:#a0a0a0;
+      text-decoration:none;
+    }
+  }
+  /*class_end*/
 }
