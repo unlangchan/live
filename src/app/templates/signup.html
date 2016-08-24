@@ -14,14 +14,14 @@
         <input type="text" class="form-control" ng-model="formdata.name" placeholder="请输入昵称。由中文、字母、数字或符号组成。"></div>
       <div class="form-group input-group ">
         <label class="input-group-addon input-group-addon-primary addon-left">密码</label>
-        <input type="password" class="form-control addon-left" ng-model="formdata.passwd" placeholder="请设置登录密码，由数字与字母组成  ">
+        <input type="password" class="form-control addon-left" ng-model="formdata.password" placeholder="请设置登录密码，由数字与字母组成  ">
         <input type="password" class="form-control addon-left" ng-model="formdata.repasswd" placeholder="请确认并再次输入登录密码"></div>
       <div class="form-group input-group">
         <label class="input-group-addon input-group-addon-primary addon-left">手机号</label>
         <input type="text" class="form-control" ng-model="formdata.phone" placeholder="请输入您的手机号码"></div>
       <div class="form-group input-group">
         <label class="input-group-addon input-group-addon-primary addon-left">验证码</label>
-        <input type="text" class="form-control" ng-model="formdata.r_code" placeholder="请输入验证码，区分大小写">
+        <input type="text" class="form-control" ng-model="formdata.code" placeholder="请输入验证码，区分大小写">
         <span class="input-group-addon input-group-addon-primary addon-left" style="padding: 0;">
           <img ng-src="{{codeimg}}" height="100%" ></span>
         <span class="input-group-btn"><button class="btn btn-info" ng-click="changecode()">换一张</button></span>

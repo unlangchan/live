@@ -66,7 +66,7 @@
 				controller: function($scope, $http) {
 					$scope.alerts = [];
 					$scope.login = function() {
-						$http.post("/api/user/sigin/", $scope.formdata).then(function(res) {
+						$http.post("/api/user/signin/", $scope.formdata).then(function(res) {
 							if (res.data.code == 1) {
 								$scope.alerts = [{
 									type: 'success',
