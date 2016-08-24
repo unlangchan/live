@@ -4,10 +4,11 @@
 	angular.module('Live.main.head')
 		.controller('headCtrl', head);
 
-	function head($scope, $http, $uibModal) {
+	function head($scope, $http, $uibModal, room) {
+		console.log(room)
 		$scope.live = {
 			user: {
-				name: "游客133131",
+				name: room.user.name,
 			},
 			info: {
 				online: 1000,

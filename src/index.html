@@ -21,7 +21,8 @@
   <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
 </head>
-<body>
+<body ng-cloak>
+   <main ng-if="$pageFinishedLoading">
   <!-- inject:/template/theme/_head.html -->
   <!-- endinject -->
 
@@ -34,7 +35,7 @@
   
   <!-- inject:/template/theme/_foot.html -->
   <!-- endinject -->
-
+  </main>
   <!-- build:js /scripts/vendor.js -->
   <!-- bower:js -->
   <!-- run `gulp inject` to automatically populate bower script dependencies -->
@@ -46,5 +47,6 @@
   <!-- endinject -->
   <!-- endbuild -->
 
+ <div id="preloader" ng-show="!$pageFinishedLoading"><div></div><span class="ts">加载中,请稍后</span></div>
 </body>
 </html>

@@ -7,7 +7,7 @@
 				<marquee direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">欢迎光临国鑫金服视频直播室！投资有风险，入市需谨慎，本直播室嘉宾的策略仅为个人观点，仅供参考！</marquee>
 			</div>
 			<div class="live_talk">
-				<div class="chat">
+				<div class="chat" ng-scrollbars ng-scrollbars-update="updateScrollbar">
 					<ul>
 						<li class="item" ng-repeat="v in ::chat.list">
 							<span class="time" ng-bind="v.time"></span>

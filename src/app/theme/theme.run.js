@@ -9,18 +9,18 @@
     .run(themeRun);
 
   /** @ngInject */
-  function themeRun() {
-    init();
+  function themeRun($rootScope, $timeout, $q, room) {
+    var whatToWait = [
+      room.load()
+    ];
+    $q.all(whatToWait).then(function() {
+      $rootScope.$pageFinishedLoading = true;
+      $timeout(init, 0);
+    });
   }
 
   function init() {
-    sina()
-    $(document).ready(function() {
-      $("#live .chat").mCustomScrollbar();
-      $("#live .chat").mCustomScrollbar("scrollTo", "bottom", {
-        scrollInertia: 1000
-      });
-    })
+    sina();
   }
 
   function sina() {
