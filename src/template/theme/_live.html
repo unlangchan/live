@@ -19,8 +19,11 @@
 						</li>
 					</ul>
 				</div>
+				<div class="tool">
+					<emotion ng-model="content" options="{width:352}"><a>点我</a></emotion>
+				</div>
 				<div class="edit">
-					<input type="text" class="content">
+					<input type="text" class="content" ng-model="content">
 					<a class="send" ng-click="send()">发送</a>
 				</div>
 			</div>

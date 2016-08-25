@@ -1,7 +1,7 @@
 (function () {
   'use strict';
 
-  angular.module('Live.main.chat', []);
+  angular.module('Live.main.chat', ['SinaEmotion']);
 
 })();
   

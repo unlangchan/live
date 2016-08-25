@@ -4,7 +4,7 @@
 	angular.module('Live.theme')
 		.service('room', room);
 
-	function room($http, $filter, $q) {
+	function room($http, $filter, $q, SinaEmotion) {
 		var icons = [{
 			"role": "0",
 			"level": "0",
@@ -53,7 +53,8 @@
 					i.to = $1;
 					return '';
 				});
-			i.content = AnalyticEmotion(str);
+
+			i.content = SinaEmotion.AnalyticEmotion(str);
 
 			var icon = getIcon(i);
 			i.icon = icon.src;
@@ -82,16 +83,21 @@
 		};
 
 		return {
+			chat: [],
+			decode: function() {
+				var s = this;
+				angular.forEach(this.data, function(value) {
+					s.chat.push(decode(value));
+				});
+			},
 			load: function() {
 				var d = $q.defer(),
 					s = this;
 				$http.get("/api/live/room").then(function(res) {
 					var data = res.data;
 					s.user = data.user;
-					s.chat = [];
-					angular.forEach(data.chat, function(value) {
-						s.chat.push(decode(value));
-					});
+					s.data = res.data.chat;
+
 					d.resolve();
 				})
 				return d.promise;
