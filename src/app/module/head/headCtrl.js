@@ -9,6 +9,7 @@
 		$scope.live = {
 			user: {
 				name: room.user.name,
+				role: room.user.role
 			},
 			info: {
 				online: 1000,

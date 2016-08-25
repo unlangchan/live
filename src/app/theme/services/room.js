@@ -60,10 +60,12 @@
 			i.icon = icon.src;
 			i.as = icon.as;
 			return {
+				id:i.id,
 				time: $filter('date')(i.utime * 1000, "[HH:mm]"),
 				name: i.name,
 				icon: i.icon,
 				as: i.as,
+				status:i.status,
 				content: i.content
 			};
 		}
@@ -89,6 +91,7 @@
 				angular.forEach(this.data, function(value) {
 					s.chat.push(decode(value));
 				});
+				s.chat.reverse();
 			},
 			load: function() {
 				var d = $q.defer(),
@@ -97,7 +100,6 @@
 					var data = res.data;
 					s.user = data.user;
 					s.data = res.data.chat;
-
 					d.resolve();
 				})
 				return d.promise;

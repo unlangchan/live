@@ -42,12 +42,12 @@
       background: #f8f4e1;
       .item{
         font-size: 12px;
+        line-height: 18px;
 
         position: relative;
 
         margin: 2px 5px 2px 5px;
         padding-left: 45px;
-        line-height:18px;
         .time{
           position: absolute;
           left: 0;
@@ -94,6 +94,115 @@
           }
         }
       }
+      .auth{
+        display: none;
+        .btn{
+          font-size: 12px;
+          line-height: 18px;
+
+          padding-top: 0;
+          padding-bottom: 0;
+        }
+      }
+      &.admin{
+        .auth{
+          display: inline;
+          &[status='1']{
+            display: none;
+          }
+        }
+      }
+    }
+    .tool{
+      height: 179px;
+
+      border-top: 1px solid #ddd4ad;
+      background: #f0ead0;
+      .icon{
+        float: left;
+
+        margin: 4px 5px 0 0;
+
+        background-image: url('/assets/images/icons/jflive_qq_icons.png');
+        background-repeat: no-repeat;
+      }
+      .text{
+        color: #4e4e4e;
+      }
+      li{
+        font-size: 12px;
+        line-height: 23px;
+
+        position: relative;
+
+        float: left;
+
+        margin: 0 0 0 7px;
+
+        cursor: pointer;
+
+        color: #4e4e4e;
+      }
+      .t-face{
+        .icon{
+          width: 18px;
+          height: 18px;
+          margin: 3px 5px 0 0;
+
+          background-position: 0 0;
+        }
+      }
+      .t-caitiao{
+        .icon{
+          width: 15px;
+          height: 17px;
+
+          background-position: -22px 0;
+        }
+        .caitiao_box{
+          position: absolute;
+          top: -110px;
+          left: -10px;
+
+          width: 100px;
+
+          background: #fff;
+          span{
+            display: block;
+
+            margin: 4px;
+
+            text-indent: 5px;
+
+            background: #f0d67e;
+          }
+        }
+      }
+      .t-clear{
+        .icon{
+          width: 16px;
+          height: 14px;
+
+          background-position: -44px 0;
+        }
+      }
+      .t-scroll{
+        .icon{
+          width: 14px;
+          height: 16px;
+
+          background-position: -66px 0;
+        }
+        .icon.on{
+          float: left;
+
+          width: 14px;
+          height: 16px;
+          margin: 4px 5px 0 0;
+
+          background: url('/assets/images/icons/jflive_talk_gd.png') no-repeat;
+        }
+      }
     }
     .edit{
       position: absolute;
@@ -138,6 +247,12 @@
   }
 }
 #live{
+  #mCSB_1_container_wrapper{
+    margin-right: 10px;
+  }
+  #mCSB_1_container{
+    padding: 0;
+  }
   ._mCS_1{
     .mCSB_inside{
       & >.mCSB_container{

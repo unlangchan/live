@@ -7,20 +7,57 @@
 				<marquee direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">欢迎光临国鑫金服视频直播室！投资有风险，入市需谨慎，本直播室嘉宾的策略仅为个人观点，仅供参考！</marquee>
 			</div>
 			<div class="live_talk">
-				<div class="chat" ng-scrollbars ng-scrollbars-update="updateScrollbar">
+				<div class="chat" ng-scrollbars ng-scrollbars-update="updateScrollbar" ng-class="{admin:chat.admin}">
 					<ul>
-						<li class="item" ng-repeat="v in ::chat.list">
-							<span class="time" ng-bind="v.time"></span>
+						<li class="item" ng-repeat="v in chat.list">
+							<span class="auth" status="{{::v.status}}">
+								<button class="btn btn-info" ng-click="admin.activate(v.id,$index)">通过</button>
+								<button class="btn btn-danger" ng-click="admin.remove(v.id,$index)">移除</button>
+							</span>
+							<span class="time" ng-bind="::v.time"></span>
 							<span class="icon">
-								<img ng-src="/assets/images/icons/level/{{v.icon}}"  title="{{v.as}}"height="18"></span>
-							<span class="name" ng-bind="v.name"></span>
-							<span class="to" ng-bind="v.to" ng-if="v.to"></span>
-							<span class="text" ng-bind-html="v.content"></span>
+								<img ng-src="/assets/images/icons/level/{{::v.icon}}"  title="{{::v.as}}"height="18"></span>
+							<span class="name" ng-bind="::v.name"></span>
+							<span class="to" ng-bind="::v.to" ng-if="v.to"></span>
+							<span class="text" ng-bind-html="::v.content"></span>
 						</li>
 					</ul>
 				</div>
 				<div class="tool">
-					<emotion ng-model="content" options="{width:352}"><a>点我</a></emotion>
+					<ul>
+						<li class="t-face">
+							<emotion ng-model="content" options="{width:352,left:180,top:280}">
+								<a>
+									<span class="icon"></span>
+									<span class="text">表情</span>
+								</a>
+							</emotion>
+						</li>
+						<li class="t-caitiao">
+							<a ng-click="config.ct =!config.ct">
+								<span class="icon"></span>
+								<span class="text">彩条</span>
+							</a>
+							<div class="caitiao_box" ng-show="config.ct">
+								<span ng-click="tool.ct('[pt顶一个]')">顶一个</span>
+								<span ng-click="tool.ct('[pt赞一个]')">赞一个</span>
+								<span ng-click="tool.ct('[pt掌声]')">掌声</span>
+								<span ng-click="tool.ct('[pt鲜花]')">鲜花</span>
+							</div>
+						</li>
+						<li class="t-clear">
+							<a ng-click="tool.clear()">
+								<span class="icon"></span>
+								<span class="text">清屏</span>
+							</a>
+						</li>
+						<li class="t-scroll">
+							<a ng-click="tool.scroll()">
+								<span class="icon" ng-class="{on:config.scroll}"></span>
+								<span class="text">滚动</span>
+							</a>
+						</li>
+					</ul>
 				</div>
 				<div class="edit">
 					<input type="text" class="content" ng-model="content">
