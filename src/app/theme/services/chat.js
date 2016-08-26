@@ -111,7 +111,7 @@
 				$http.post("/api/chat/set", {
 					content: content
 				}).then(function(res) {
-					if (res.code == 1) {
+					if (res.data.code == 1) {
 						toastr.success(res.data.msg);
 					} else {
 						toastr.warning(res.data.msg, '提示');

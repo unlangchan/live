@@ -585,7 +585,7 @@
 				<div class="chat" ng-scrollbars ng-scrollbars-update="updateScrollbar" ng-class="{admin:chat.admin}">
 					<ul>
 						<li class="item" ng-repeat="v in chat.list">
-							<span class="auth" status="{{::v.status}}">
+							<span class="auth" status="{{::v.status}}" ng-if="chat.admin">
 								<button class="btn btn-info" ng-click="admin.activate(v.id,$index)">通过</button>
 								<button class="btn btn-danger" ng-click="admin.remove(v.id,$index)">移除</button>
 							</span>
