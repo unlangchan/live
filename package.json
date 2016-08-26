@@ -1,5 +1,5 @@
 {
-  "name": "live",
+  "name": "Live",
   "version": "0.0.0",
   "devDependencies": {
     "browser-sync": "~2.9.11",
