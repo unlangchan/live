@@ -10,6 +10,7 @@ angular.module('Live', [
   'smart-table',
   "xeditable",
   'angular-progress-button-styles',
+  'ngScrollbars',
 
   'Live.theme',
   'Live.main'
