@@ -1,7 +1,582 @@
 <div id="live">
 	<div class="w1300">
-		<div class="live_left"></div>
-		<div class="live_middle"></div>
+		<div class="live_left">
+			<div class="lbar_btn">
+				<img src="/assets/images/live/live_lbar_btn.png">
+			</div>
+			<div class="events">
+				<h3 id="nextImport" style="text-align: center;color:#dedede;font:14px/34px '黑体'">下一重要事件:美国GDP数据</h3>
+				<div class="times">
+					<p>
+						<em class="days" style="margin:0 0 0 23px;">天</em>
+						<em id="t_dn" style="margin:0 15px;">小时</em>
+						<em id="t_hn" style="margin:0 15px;">分</em>
+						<em id="t_mn" style="margin:0 15px;">秒</em>
+					</p>
+					<span id="t_d">0</span>
+					<img src="/assets/images/live/djs_days.jpg" style="float:left;margin:12px 10px 0 0">
+					<span id="t_h">06 :</span>
+					<span id="t_m">03 :</span>
+					<span id="t_s">58</span>
+				</div>
+				<a href="javascript:void(0);" title="" class="see" id="report">
+					查看最新研究报告
+				</a>
+			</div>
+			<div class="sidenav clear">
+				<ul>
+					<li class="left" id="tc_cjrl" onclick="app.EconomicCalendar.onclick();">
+						<span>财经日历</span>
+					</li>
+					<li class="right" id="tc_kcap" onclick="app.courses.onclick();">
+						<span>课程安排</span>
+					</li>
+					<li class="left" id="tc_gxzb" onclick="app.gxBattlefield();">
+						<span>往期回顾</span></li>
+					<li class="right" id="tc_sqbd" onclick="app.artifact.open();">
+						<span>神器宝典</span>
+					</li>
+					<li class="left" id="tc_gwpt" onclick="app.btnClickAndStatics.gwpt();">
+						<span>顾问平台</span></li>
+					<li class="right" id="tc_rjxz" onclick="app.btnClickAndStatics.rjxz();">
+						<span>软件下载</span></li>
+				</ul>
+			</div>
+			<div class="live_price">
+				<h4 class="live_price_nav">
+					<span class="active">津贵所行情</span>
+					<span>齐鲁行情</span>
+				</h4>
+				<ul id="hjPrice">
+					<li class="reds">
+						<em>白银</em>
+						<span>3987.0</span>
+						<b>+16</b>
+					</li>
+					<li class="reds">
+						<em>铂金</em>
+						<span>230.7</span>
+						<b>+0.95</b>
+					</li>
+					<li class="reds">
+						<em>钯金</em>
+						<span>148.7</span>
+						<b>+1.43</b>
+					</li>
+					<li class="reds">
+						<em>铜</em>
+						<span>30991.0</span>
+						<b>+231</b>
+					</li>
+					<li class="reds">
+						<em>镍</em>
+						<span>65.95</span>
+						<b>+0.57</b>
+					</li>
+					<li class="reds">
+						<em>铝</em>
+						<span>11001.0</span>
+						<b>+72</b>
+					</li>
+				</ul>
+				<ul id="qlPrice" style="display:none">
+					<li class="reds">
+						<em>现货银</em>
+						<span>3986</span>
+						<b>+11</b>
+					</li>
+					<li class="reds">
+						<em>现货铝</em>
+						<span>10997</span>
+						<b>+48</b>
+					</li>
+					<li class="reds">
+						<em>现货铜</em>
+						<span>30980</span>
+						<b>+163</b>
+					</li>
+					<li class="greens">
+						<em>现货重油</em>
+						<span>2306</span>
+						<b>-8</b>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="live_middle">
+			<div class="live_contents_middle left">
+				<div class="video">
+					<h2 id="videoName">直播：实战油击队 &nbsp;&nbsp;&nbsp;&nbsp;唐贤仕</h2>
+					<img src="/assets/images/live/video.png">
+				<!--	<div class="video_cons">
+						<div class="video_mfzc" style="" onclick="app.userReg.videoReg();">免费注册</div>
+						<div class="light_off" style="display:block;">
+							<span class="whisper"></span>
+							<span class="takeoff"></span>
+						</div>
+						<div class="movies" id="videoArea" style="position: absolute; z-index: 0; left: 0px;">
+							<gs:video-live id="videoComponent" style="width:100%;" ctx="webcast" ownerid="df8ee468757e499a81c30316c6e7ff05" site="guoxin.gensee.com" uname="游客128278" uid="8873372548" authcode="333333" class="gs-sdk-widget">
+								<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="_GS_FLASH_ID_videoComponent" width="100%" height="100%" codebase="https://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab#version=11.1.0.0">
+									<param name="movie" value="http://static.gensee.com/webcast/static/sdk/flash/GenseeEasyLive.swf?160426">
+									<param name="wmode" value="transparent">
+									<param name="quality" value="high">
+									<param name="bgcolor" value="#000000">
+									<param name="allowScriptAccess" value="always">
+									<param name="allowFullScreen" value="true">
+									<param name="flashvars" value="sc=0&amp;entry=http%3A%2F%2Fguoxin.gensee.com%2Fwebcast&amp;code=df8ee468757e499a81c30316c6e7ff05__03ee9d06e8524777adfc4e75c79192be&amp;lang=&amp;nickName=%E6%B8%B8%E5%AE%A2128278&amp;httpMode=false&amp;group=&amp;widgetid=videoComponent&amp;userdata=&amp;showCBar=&amp;backURI=&amp;ver=4.0&amp;publicChat=&amp;init=&amp;liveImprovedMode=false&amp;visible=true&amp;embedNetSettings=true&amp;batchRecChat=false">
+									<embed src="http://static.gensee.com/webcast/static/sdk/flash/GenseeEasyLive.swf?160426" quality="high" bgcolor="#000000" wmode="transparent" width="100%" height="100%" name="_GS_FLASH_ID_videoComponent" align="middle" play="true" loop="false" allowscriptaccess="always" allowfullscreen="true" type="application/x-shockwave-flash" flashvars="sc=0&amp;entry=http%3A%2F%2Fguoxin.gensee.com%2Fwebcast&amp;code=df8ee468757e499a81c30316c6e7ff05__03ee9d06e8524777adfc4e75c79192be&amp;lang=&amp;nickName=%E6%B8%B8%E5%AE%A2128278&amp;httpMode=false&amp;group=&amp;widgetid=videoComponent&amp;userdata=&amp;showCBar=&amp;backURI=&amp;ver=4.0&amp;publicChat=&amp;init=&amp;liveImprovedMode=false&amp;visible=true&amp;embedNetSettings=true&amp;batchRecChat=false" pluginspage="http://www.adobe.com/go/getflashplayer"></object>
+							</gs:video-live>
+						</div>
+					</div>-->
+				</div>
+				<div class="immediate_suggest">
+					<div class="immediate_suggest_nav">
+						<span class="active" onclick="app.rooCallSuggest.navTab(this)">即时建议</span>
+						<span onclick="app.rooCallSuggest.navTab(this)" class="">嘉宾介绍</span>
+					</div>
+					<div class="immediate_suggest_con" id="sugcall">
+						<div class="cons jsjy" style="display: block;">
+							<div class="zd_selct">
+								<div class="week right">
+									<p class="set">全部</p>
+									<ul class="new" style="display: none;">
+										<li>全部</li>
+										<li>鼎盛战队</li>
+										<li>巅峰战队</li>
+										<li>风林战队</li>
+									</ul>
+								</div>
+							</div>
+							<div class="suggest_ktsp" id="suggestP" style="display:none">
+								<div class="timing left">
+									<p class="left">您的即时建议服务体验剩余</p>
+						<span class="tm left"> <em id="t_d2"></em> <em id="t_h2">00</em>
+							<em>小时</em>
+							<em id="t_m2">00</em>
+							<em>分</em>
+							<em id="t_s2">00</em>
+							<em>秒</em>
+						</span>
+									<p class="left">获取长期查看权，请您</p>
+								</div>
+								<a target="_blank" href="https://me.91guoxin.com/kaihu.html?s=shipin_pc_sp&amp;entercode=gxhj_gw_pcweb_home_spkh" class="ktsp left">开通实盘</a>
+							</div>
+							<dl>
+								<dt class="bg_yy">
+									<span>操作建议</span>
+									<span>发布时间</span>
+									<span>品种</span>
+									<span>建仓方向</span>
+									<span>发布人</span>
+								</dt>
+								<dd id="movieBox4" tabindex="5001" style="overflow: hidden; outline: none;">
+									<div class="rollBox rollBox4" id="rollBox4">
+										<div class="rollBar"></div>
+									</div>
+									<ul class="movieBox_msg4" id="suggestContent">
+										<li class="bg_yy">
+								<span class="sp4" style="color:#f4a100 " groupid="1472173661897">
+									已建仓 <i class="news"></i>
+								</span>
+											<span class="sp5">2016-08-26</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472173661897">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472173661897">
+									(
+									<em>1153</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472126153839">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">镍</span>
+											<span class="sp2" groupid="1472126153839">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472126153839">
+									(
+									<em>620</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#d8262e" groupid="1472103661626">已平仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472103661626">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472103661626">
+									(
+									<em>312</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472106484638">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472106484638">点击查看</span>
+											<span class="sp3">潘钧-鼎盛战队</span>
+								<span class="dzan" groupid="1472106484638">
+									(
+									<em>4</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1472105891431">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">镍</span>
+											<span class="sp2" groupid="1472105891431">点击查看</span>
+											<span class="sp3">潘钧-鼎盛战队</span>
+								<span class="dzan" groupid="1472105891431">
+									(
+									<em>162</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#d8262e" groupid="1472023571662">已平仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铂</span>
+											<span class="sp2" groupid="1472023571662">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472023571662">
+									(
+									<em>237</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1472103867031">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">银</span>
+											<span class="sp2" groupid="1472103867031">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472103867031">
+									(
+									<em>344</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472103661626">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472103661626">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472103661626">
+									(
+									<em>312</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#d8262e" groupid="1472093592042">已平仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472093592042">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472093592042">
+									(
+									<em>1059</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472103357394">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1472103357394">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472103357394">
+									(
+									<em>2222</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#585094" groupid="1472093592042">已修改</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472093592042">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472093592042">
+									(
+									<em>1059</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472093592042">已建仓</span>
+											<span class="sp5">2016-08-25</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1472093592042">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1472093592042">
+									(
+									<em>1059</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#00b3c7" groupid="1471914280959">已减持</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1471914280959">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1471914280959">
+									(
+									<em>74</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#00b3c7" groupid="1472049032405">已减持</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1472049032405">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472049032405">
+									(
+									<em>114</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1472049032405">已建仓</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1472049032405">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472049032405">
+									(
+									<em>114</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#00b3c7" groupid="1472020866274">已减持</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">银</span>
+											<span class="sp2" groupid="1472020866274">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472020866274">
+									(
+									<em>65</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#585094" groupid="1472023571662">已修改</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">铂</span>
+											<span class="sp2" groupid="1472023571662">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472023571662">
+									(
+									<em>237</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#00b3c7" groupid="1472023571662">已减持</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">铂</span>
+											<span class="sp2" groupid="1472023571662">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472023571662">
+									(
+									<em>237</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1472023571662">已建仓</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">铂</span>
+											<span class="sp2" groupid="1472023571662">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472023571662">
+									(
+									<em>237</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#585094" groupid="1471857980086">已修改</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">银</span>
+											<span class="sp2" groupid="1471857980086">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1471857980086">
+									(
+									<em>1183</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#00b3c7" groupid="1471857980086">已减持</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">银</span>
+											<span class="sp2" groupid="1471857980086">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1471857980086">
+									(
+									<em>1183</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1472020866274">已建仓</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">银</span>
+											<span class="sp2" groupid="1472020866274">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1472020866274">
+									(
+									<em>65</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1472009094135">已建仓</span>
+											<span class="sp5">2016-08-24</span>
+											<span class="sp1">镍</span>
+											<span class="sp2" groupid="1472009094135">点击查看</span>
+											<span class="sp3">何英源－鼎盛战队</span>
+								<span class="dzan" groupid="1472009094135">
+									(
+									<em>716</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#d979b8" groupid="1471867592729">已撤销</span>
+											<span class="sp5">2016-08-23</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1471867592729">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1471867592729">
+									(
+									<em>1791</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#f4a100 " groupid="1471917391870">已建仓</span>
+											<span class="sp5">2016-08-23</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1471917391870">点击查看</span>
+											<span class="sp3">李克钊-风林战队</span>
+								<span class="dzan" groupid="1471917391870">
+									(
+									<em>698</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1471914280959">已建仓</span>
+											<span class="sp5">2016-08-23</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1471914280959">点击查看</span>
+											<span class="sp3">夏鹏宇-风林战队</span>
+								<span class="dzan" groupid="1471914280959">
+									(
+									<em>74</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#585094" groupid="1471867592729">已修改</span>
+											<span class="sp5">2016-08-23</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1471867592729">点击查看</span>
+											<span class="sp3">付凯旋-巅峰战队</span>
+								<span class="dzan" groupid="1471867592729">
+									(
+									<em>1791</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#585094" groupid="1471851454517">已修改</span>
+											<span class="sp5">2016-08-22</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1471851454517">点击查看</span>
+											<span class="sp3">康琛－巅峰战队</span>
+								<span class="dzan" groupid="1471851454517">
+									(
+									<em>2472</em>
+									)
+								</span>
+										</li>
+										<li class="bg_yy">
+											<span class="sp4" style="color:#00b3c7" groupid="1471851454517">已减持</span>
+											<span class="sp5">2016-08-22</span>
+											<span class="sp1">现货重油</span>
+											<span class="sp2" groupid="1471851454517">点击查看</span>
+											<span class="sp3">康琛－巅峰战队</span>
+								<span class="dzan" groupid="1471851454517">
+									(
+									<em>2472</em>
+									)
+								</span>
+										</li>
+										<li>
+											<span class="sp4" style="color:#f4a100 " groupid="1471867592729">已建仓</span>
+											<span class="sp5">2016-08-22</span>
+											<span class="sp1">铜</span>
+											<span class="sp2" groupid="1471867592729">点击查看</span>
+											<span class="sp3">康琛－巅峰战队</span>
+								<span class="dzan" groupid="1471867592729">
+									(
+									<em>1791</em>
+									)
+								</span>
+										</li>
+									</ul>
+								</dd>
+							</dl>
+						</div>
+						<div class="cons jczj" id="analysts" style="display: none;">
+							<div class="jbjs left clear"> <strong class="left"><img src="https://v.91guoxin.com/Uploads/92f530dd-2aab-4679-92c9-3afdb1eb6f54.jpg?time=1466034194773"></strong>
+								<dl class="right">
+									<dt>
+										<span>唐贤仕</span>
+										高级策略分析师
+									</dt>
+									<dd id="movieBox3">
+										<p style="height: 84px; overflow: hidden; outline: none;" id="rollBox3" class="movieBox_msg3" tabindex="5212">
+											国鑫金服高级策略师，国内资深金融分析师。国内知名学府金融学专业出身，并在香港理工大学有过专业进修经验！拥有10年以上金融从业经验，颇具国际前沿视野，对股市、商品和外汇市场均有独到的研究和理论支撑。
+											最先在一家香港知名投行从事全球基金研究，为高净值的大资金客户进行私人财富管理，配置全球优质资产。
+											后转战外汇、黄金白银原油等和商品保证金交易，和朋友共同创立“博龙盛世”投资基金，常年维持稳定的操作收益！
+											尤其是在黄金白银和原油方面的专业分析和持续稳定收益为他赢得了很高的市场声誉，近两年实盘交易盈利分别达到538%和496%。并多次与新浪财经、东方财富、大金网等知名财经媒体合作。
+											交易中追求“简单易控”的风格，注重行为习惯的培养，自成一家形成独到完善的交易体系。
+										</p>
+									</dd>
+								</dl>
+							</div>
+							<div class="jbjs left clear"> <strong class="left"><img src="https://v.91guoxin.com/Uploads/4110f683-ce38-4110-a2e0-f1a265563e8e.jpg?time=1467700809157"></strong>
+								<dl class="right">
+									<dt>
+										<span>邓欣欣</span>
+									</dt>
+									<dd id="movieBox7">
+										<p style="height: 84px; overflow: hidden; outline: none;" id="rollBox7" class="movieBox_msg7" tabindex="5213">
+											国鑫金服分析师，毕业后投身中国期货市场，服务于深圳地区交易量、客户权益双第一的期货团队，随后供职于华泰长城期货有限公司，在现货白银市场迅猛发展之际转战贵金属现货投资市场，借着“一带一路”、“沪港通”、“国企改革重组”题材狠抓“中”字头股票。
+											技术经济及管理学硕士，中国注册金融分析师学员。
+											基本面分析是根本，技术面分析为骨干。常年潜心研究K线组合特色，洞悉重大数据及风险事件对短期行情波动影响，通过数理统计分析金银油走势特色，顺势而为与金银起舞；游弋繁杂技术指标中，抽丝剥茧，返璞归真，探求行情最原始、最本质的走势特色，略过迷茫行情，狠抓稳健清晰收益，实现总体收益最优。
+										</p>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="live_right" ng-controller="ChatCtrl">
 			<div class="notice">
 				<marquee direction="left" scrollamount="3" onmouseover="this.stop()" onmouseout="this.start()">欢迎光临国鑫金服视频直播室！投资有风险，入市需谨慎，本直播室嘉宾的策略仅为个人观点，仅供参考！</marquee>
