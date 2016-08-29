@@ -250,81 +250,98 @@
             line-height: 33px;
             color:#e1e1e1;
             overflow: hidden;
-            &:first-child{
-              width:100px;
-            }
             span{
-              width:115px;
-              text-indent:9px;
-              float: left;
+              width:115px;text-indent:9px;float: left
             }
-            dd{
+          }
+          dd{
+            height:102px;
+            overflow: hidden;
+            position: relative;
+            .rollBox{
+              width:3px;
+              position:absolute;
+              right:3px;
+              top:0;
+              background:#dcdcdc;
+              zoom:1;
+              display:block;
+              z-index: 9;
+              .rollBar{
+                position:absolute;
+                width:3px;
+                background:#ffb018;
+                left:0;
+                top:0;
+                height:30px;
+              }
+            }
+            .rollBox4{
               height:102px;
-              overflow: hidden;
+              top:0px;
+            }
+            ul{
               position: relative;
-              ul{
-                position: relative;
-                li{
+              li{
+                height:34px;
+                span{
+                  line-height:34px;
                   height:34px;
-                  span{
-                    line-height:34px;
-                    height:34px;
-                    color:#e1e1e1;
-                    float: left;
-                    text-overflow:ellipsis;
-                    white-space:nowrap;
-                    overflow:hidden;
+                  color:#e1e1e1;
+                  float: left;
+                  text-overflow:ellipsis;
+                  white-space:nowrap;
+                  overflow:hidden;
+                }
+                .sp5{
+                  width:87px;
+                  text-indent: 5px;
+                }
+                .sp1{
+                  width:120px;
+                  text-indent: 25px;
+                  padding-left:30px;
+                }
+                .sp2{
+                  width:82px;
+                  height:26px;
+                  background: #896c49;
+                  border-radius: 2px;
+                  text-align: center;
+                  line-height: 26px;
+                  cursor: pointer;
+                  margin: 5px 0 0 20px;
+                }
+                .sp3{
+                  text-indent:30px;
+                  width:185px;
+                }
+                .sp4{
+                  width:100px;
+                  text-indent:25px;
+                  position: relative;
+                  .news{
+                    width:26px;
+                    height:13px;
+                    display: block;
+                    position:absolute;
+                    top:2px;
+                    left:3px;
+                    background: url("../assets/images/live/live_news.png") no-repeat;
                   }
-                  .sp5{
-                    width:87px;
-                    text-indent: 5px;
+                }
+                .dzan{
+                  height: 34px;
+                  color:#e1e1e1;
+                  margin: 0 0 0 10px;
+                  line-height: 34px;
+                  background:url("../assets/images/live/live_loves.png") no-repeat left center;
+                  padding:0 0 0 26px;
+                  cursor: pointer;
+                  position: relative;
+                  em{
+                    margin: 0 5px;
                   }
-                  .sp1{
-                    width:120px;
-                    text-indent: 25px;
-                  }
-                  .sp2{
-                    width:82px;
-                    height:26px;
-                    background: #896c49;
-                    border-radius: 2px;
-                    text-align: center;
-                    line-height: 26px;
-                    cursor: pointer;
-                    margin: 5px 0 0 20px;
-                  }
-                  .sp3{
-                    text-indent:30px;
-                    width:185px;
-                  }
-                  .sp4{
-                    width:100px;
-                    text-indent:25px;
-                    position: relative;
-                    .news{
-                      width:26px;
-                      height:13px;
-                      display: block;
-                      position:absolute;
-                      top:2px;
-                      left:3px;
-                      background: url("../assets/images/live/live_news.png") no-repeat;
-                    }
-                  }
-                  .dzan{
-                    height: 34px;
-                    color:#e1e1e1;
-                    margin: 0 0 0 10px;
-                    line-height: 34px;
-                    background:url("../images/live_loves.png") no-repeat left center;
-                    padding:0 0 0 26px;
-                    cursor: pointer;
-                    position: relative;
-                    em{
-                      margin: 0 5px;
-                    }
-                  }
-
                 }
               }
             }
